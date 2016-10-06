@@ -1,0 +1,34 @@
+.panel{
+  margin-top: 20px;
+  box-shadow: 0 8px 6px -6px black;
+}
+.panel-heading{
+  background-color: #003D6B;
+}
+.ryanSplashLogo{
+  text-align: center;
+  font-size: 75px;
+  font-family: "quicksand";
+  color: #BAD80A;
+}
+.kendraSignup{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.signUpForm{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.kendraInput{
+  display:block;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  width: 25vw;
+  height: 30px;
+  font-family: "quicksand";
+}
+.kendraButton{
+  margin-top: 15px;
+}

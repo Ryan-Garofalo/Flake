@@ -1,0 +1,229 @@
+@font-face {
+ font-family:'quicksand';
+ src:  url('../fonts/quicksand/Quicksand-Regular.otf') format('truetype');
+}
+@font-face {
+ font-family:'CaviarDreams';
+ src:  url('../fonts/Caviar-Dreams/CaviarDreams.ttf') format('truetype');
+}
+* {
+  font-family:"quicksand";
+}
+h3.panel-title{
+  color: #FFFFE9 !important
+}
+.panel-title{
+  font-family:"quicksand";
+  font-size: 30px;
+}
+.panel-body{
+  font-family:"quicksand";
+  font-size: 15px;
+}
+header{
+  background-color: black;
+  text-align: center;
+  box-shadow: 4px 0px 15px 4px black;
+}
+.title{
+    font-family:"quicksand";
+    color: #BAD80A;
+    float:left;
+    margin-left: 20px;
+    margin-top: 2vh;
+}
+.dashboard{
+  background-color: #FFFFE9;
+}
+.profile_pic_container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+aside{
+  background-color:black;
+  border-top-style: inset;
+  border-right-style: inset;
+  border-bottom-style: inset;
+}
+footer{
+  background-color: black;
+  color:#BAD80A;
+  text-align: center;
+}
+.navlink{
+  color: #FFFFE9;
+  font-size: 15px;
+  font-family:"quicksand";
+}
+.nav{
+  margin-top: 10px;
+  float: right;
+}
+a{
+  color: #FFFFE9;
+}
+.panel{
+  margin-top: 20px;
+  box-shadow: 0 8px 6px -6px black;
+}
+.panel-heading{
+  background-color: #003D6B;
+}
+.profilePic{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 125px;
+  width: 125px;
+  border-radius: 50%;
+  border: solid 1px #555;
+  background-color: #eed;
+}
+.ryanSplashLogo{
+  text-align: center;
+  font-size: 75px;
+  font-family: "quicksand";
+  color: #BAD80A;
+}
+.ryanSplashBody{
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width:100vw;
+  background-color:black;
+}
+.ryanSlogan{
+  font-family: "quicksand";
+    color: #FFFFE9;
+}
+.kendraLogin{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ryanInput{
+  display:block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 25vw;
+  height: 30px;
+  font-family: "quicksand";
+}
+.ryanButton{
+  background: #003D6B;
+  background-image: -webkit-linear-gradient(top, ##4F42C1, ##4F42C1);
+  background-image: -moz-linear-gradient(top, ##4F42C1, ##4F42C1);
+  background-image: -ms-linear-gradient(top, ##4F42C1, ##4F42C1);
+  background-image: -o-linear-gradient(top, ##4F42C1, ##4F42C1);
+  background-image: linear-gradient(to bottom, ##4F42C1, ##4F42C1);
+  -webkit-border-radius: 11;
+  -moz-border-radius: 11;
+  border-radius: 2px;
+  font-family: "quicksand";
+  color: #FFFFE9;
+  font-size: 15px;
+  padding: 5px 30px 5px 30px;
+  text-decoration: none;
+  border: none;
+}
+.ryanLoginButton:hover {
+  background: #BAD80A;
+  background-image: -webkit-linear-gradient(top, ##BAD80A;, #3498db);
+  background-image: -moz-linear-gradient(top, ##BAD80A;, #3498db);
+  background-image: -ms-linear-gradient(top, ##BAD80A;, #3498db);
+  background-image: -o-linear-gradient(top, ##BAD80A;, #3498db);
+  background-image: linear-gradient(to bottom, ##BAD80A;, #3498db);
+  text-decoration: none;
+}
+.ryanCenter{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+.ryanSignupButton{
+  margin-right: 20px;
+}
+.stickFam{
+  margin-top: 25px;
+  height: 200px;
+  width: auto;
+}
+.showPageImage{
+  height:20vh;
+  width:15vw;
+}
+.showConnection{
+  height: 85vh;
+  width:100%;
+  display: flex;
+}
+.showContainer{
+  display: inline-flex;
+  margin-top: 5vh;
+  float: right;
+  margin-left: auto;
+  position: relative;
+  width: 75vw;
+  margin-right: 5vw;
+  height: 70vh;
+  border: .75px solid black;
+  border-radius: 1%;
+}
+.showPageImage{
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.ryansSmallLinks{
+  margin-left: 8%;
+}
+.ryansSmallLinks a{
+  color: black;
+}
+.connectionHistory{
+  display: inline-flex;
+  width: 40vw;
+  float: right;
+  overflow-y: scroll;
+  display: inline-block;
+  margin-top: 2vh;
+  margin-right: 25px;
+}
+table{
+  border: .5px solid grey;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  width: 100%;
+}
+th{
+  width: 33%;
+  padding-left: 3%;
+  height: 2em;
+  background-color: #003D6B;
+  color: #FFFFE9;
+}
+tr:nth-child(even){
+  background-color:#FFFFE9;
+}
+td{
+  padding-left: 3%;
+}
+tr{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-bottom:1px #333 !important;
+}
+#eventButton{
+  float: right;
+  margin-top: -30px;
+}
+#flakeRate{
+  font-size: 25px;
+  color:#BAD80A;
+  margin-bottom: 10px;
+}
