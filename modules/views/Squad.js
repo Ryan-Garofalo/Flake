@@ -1,10 +1,11 @@
 import React from 'react'
+import {Link} from 'react-router'
 
 export default React.createClass({
   render() {
     return (
-      <div className='new-list'>
-        <h1>Create a List Here</h1>
+      <div className='EditConnection'>
+        <h1>My Squad</h1>
       </div>
     )
   }

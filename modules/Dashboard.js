@@ -4,108 +4,25 @@ import { Link } from 'react-router';
 
 var data = [
   {
-    id:1,
-    day:"Monday",
-    relationType:"family",
-    relation:"Mom",
-    contactFrequency:"1 per week",
-    lastContact:"9/10/2016",
-    list:"to dos",
-    user_id:1,
-    is_user:true,
-    connection_id:2,
-    city:"Glens Falls",
-    email:"lauriegarofalo@gmail.com"
+    day:"Monday"
   },
   {
-    id:2,
-    day:"Tuesday",
-    relationType:"family",
-    relation:"dad",
-    contactFrequency:"1 per month",
-    lastContact:"8/29/2016",
-    list:"to dos",
-    user_id:1,
-    is_user:true,
-    connection_id:3,
-    city:"Glens Falls",
-    email:"greggarofalo@gmail.com"
-
+    day:"Tuesday"
   },
   {
-    id:3,
-    day:"Wednesday",
-    relationType:"family",
-    relation:"Grandfather",
-    contactFrequency:"2 per month",
-    lastContact:"8/14/2016",
-    list:"to dos",
-    user_id:1,
-    is_user:true,
-    connection_id:3,
-    city:"Glens Falls",
-    email:"haroldgarofalo@gmail.com"
-
+    day:"Wednesday"
   },
   {
-    id:2,
-    day:"Thursday",
-    relationType:"family",
-    relation:"Sister",
-    contactFrequency:"1 per day",
-    lastContact:"9/12/2016",
-    list:"to dos",
-    user_id:1,
-    is_user:true,
-    connection_id:3,
-    city:"Glens Falls",
-    email:"alexisgarofalo@gmail.com"
-
+    day:"Thursday"
   },
   {
-    id:2,
-    day:"Friday",
-    relationType:"family",
-    relation:"Sister",
-    contactFrequency:"1 per week",
-    lastContact:"9/10/2016",
-    list:"to dos",
-    user_id:1,
-    is_user:true,
-    connection_id:3,
-    city:"Glens Falls",
-    email:"chelseagarofalo@gmail.com"
-
+    day:"Friday"
   },
   {
-    id:2,
-    day:"Saturday",
-    relationType:"friend",
-    relation:"Best friends",
-    contactFrequency:"1 per week",
-    lastContact:"9/10/2016",
-    list:"to dos",
-    user_id:1,
-    is_user:true,
-    connection_id:3,
-    city:"Glens Falls",
-    email:"kendralyndon@gmail.com"
-
+    day:"Saturday"
   },
   {
-    id:3,
-    day:"Sunday",
-    relationType:"friend",
-    relation:"raquetball partners/ enemies",
-    contactFrequency:"1 per week",
-    lastContact:"9/10/2016",
-    list:"to dos",
-    user_id:1,
-    is_user:true,
-    connection_id:4,
-    city:"Glens Falls",
-    email:"maxsands@gmail.com"
-
+    day:"Sunday"
   },
 ]
 
@@ -132,7 +49,6 @@ var Dashboard = React.createClass({
 var Connections = React.createClass({
   render(){
     var arr = this.props.data.map(function(connection, i){
-      var makeString = connection.id.toString();
       return (
         <div className="connection panel panel-custom" key={i}>
           <div className="panel-heading">
@@ -140,10 +56,7 @@ var Connections = React.createClass({
             <button id="eventButton">Add Event</button>
           </div>
           <div className="panel-body">
-            <p>Relation: {connection.relation}</p>
-            <p>Contact Frequency: {connection.contactFrequency}</p>
-            <p>Last Contact: {connection.lastContact}</p>
-            <p><Link className="kendraLink" to="/100/lists/100">Shared List: {connection.list}</Link></p>
+
           </div>
         </div>
       );
