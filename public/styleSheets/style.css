@@ -71,6 +71,8 @@ a{
 }
 .panel-heading{
   background-color: #003D6B;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .profilePic{
   margin-top: 20px;
@@ -226,4 +228,11 @@ tr{
   font-size: 25px;
   color:#BAD80A;
   margin-bottom: 10px;
+}
+#october{
+  height: 500px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

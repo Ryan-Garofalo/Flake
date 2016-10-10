@@ -10,20 +10,34 @@ export default React.createClass({
     return {ingredients:[]};
   },
   componentWillMount: function(){
-    HTTP.get('/animals')
+    HTTP.get('/events')
     .then(function(data){
       // console.log(data);
         this.setState({ingredients:data});
     }.bind(this));
   },
   render: function(){
-    console.log(this.state.ingredients[0]);
-
-  var listItems = this.state.ingredients.map(function(item){
-    console.log("hi");
-    console.log(item.id);
-    return <li>{item.id} + {item.name}</li>;
-  });
-  return (<ul>{listItems}</ul>);
-  }
+    var listItems = this.state.ingredients.map(function(item, i){
+      console.log(item);
+      return (
+        <div className="connection panel panel-custom" key={i}>
+          <div className="panel-heading" >
+            <h3 className="panel-title">{item.name}</h3>
+          </div>
+          <div className="panel-body">
+            <ul>
+              <li>{item.date}</li>
+              <li>{item.type}</li>
+              <li>{item.organizer_id}</li>
+            </ul>
+          </div>
+        </div>
+      );
+      });
+      return (
+      <div className="dashboard col-lg-10 col-md-10 col-xs-12">
+        {listItems}
+      </div>
+      )
+    }
 });

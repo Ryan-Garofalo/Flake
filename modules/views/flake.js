@@ -38,11 +38,11 @@ export default React.createClass({
                       <td>Don't</td>
                       <td>Flake</td>
                     </tr>
-                    <tr>
+                    {/* <tr>
                       <td>lunch</td>
                       <td>9/3/2016</td>
                       <td>Went to lucilles for bisquits</td>
-                    </tr>
+                    </tr> */}
                   </tbody>
                 </table>
               </div>

@@ -1,14 +1,11 @@
 import React from 'react'
-import {Link} from 'react-router'
-import Hello from '../components/hello.js'
-
+console.log("hello world2");
 
 export default React.createClass({
   render() {
     return (
       <div className='EditConnection'>
-        <Hello></Hello>
-        <h1>Practice Component</h1>
+        <h1>Practice Component2222</h1>
       </div>
     )
   }

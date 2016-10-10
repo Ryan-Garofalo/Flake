@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router';
 
+
 var data = [
   {
     day:"Monday"
@@ -52,7 +53,7 @@ var Connections = React.createClass({
       return (
         <div className="connection panel panel-custom" key={i}>
           <div className="panel-heading">
-            <h3 className="panel-title"><Link to='/100/connection/501'>{connection.day}</Link></h3>
+            <h3 className="panel-title">{connection.day}</h3>
             <button id="eventButton">Add Event</button>
           </div>
           <div className="panel-body">
