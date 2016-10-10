@@ -1,5 +1,5 @@
 var Fetch = require('whatwg-fetch');
-var baseUrl = 'http://localhost:10000';
+var baseUrl = 'https://flake09.herokuapp.com';
 
 
 var service = {

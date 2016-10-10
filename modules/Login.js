@@ -17,7 +17,7 @@ var Heading = React.createClass({
     return (
       <div className="heading">
         <h1 className="ryanSplashLogo">Flake</h1>
-        <h2 className="ryanSlogan">In a world filled with flaky people, those that honor commitments and do what they say STAND-OUT. Integrity is currency.</h2>
+        <h4 className="ryanSlogan">In a world filled with flaky people, those that honor commitments and do what they say STAND-OUT. Integrity is currency.</h4>
       </div>
     );
   }

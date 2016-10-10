@@ -40,12 +40,13 @@ var Aside = React.createClass({
           <div className="profile_pic_container">
             <img className="profilePic" src="../images/ryan.jpg"/>
           </div>
-          <div id="flakeRate">Flake Rate: 0%</div>
+          <div id="flakeRate"><Link to="/100/flake">Flake Rate: 0%</Link></div>
           <Search />
           <ConnectionTypes />
-          <p><Link to="/100/eventful">Manage Activities</Link></p>
-          <p><Link to="/100/lists/new">View Connections</Link></p>
-          <p><Link to="/100/connection/new">Add a Connection</Link></p>
+          <p><Link to="/100/mySquad">My Squad</Link></p>
+          <p><Link to="/100/calender">Calender</Link></p>
+          <p><Link to="/100/http">Manage Activities</Link></p>
+          <p><Link to="/100/practice">Practice</Link></p>
         </aside>
       </div>
     )
