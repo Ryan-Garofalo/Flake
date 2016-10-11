@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --inline --content-base . --history-api-fallback"
-
   },
   "author": "Ryan",
   "dependencies": {
@@ -16,6 +15,7 @@
     "react-bootstrap": "^0.30.3",
     "react-dom": "^0.14.8",
     "react-router": "^2.0.0",
+    "reflux": "^0.4.1",
     "watchify": "^3.7.0",
     "whatwg-fetch": "^1.0.0"
   },

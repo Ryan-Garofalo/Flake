@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router'
-var HTTP = require('../../services/httpservice');
-// var ListItem = require('../../components/ListItem.jsx');
+var HTTP = require('../services/httpservice');
+import Input from '../components/input'
+import EventButt from '../components/eventButtons';
 
 
 
@@ -20,24 +21,29 @@ export default React.createClass({
     var listItems = this.state.ingredients.map(function(item, i){
       console.log(item);
       return (
-        <div className="connection panel panel-custom" key={i}>
+        <div className="connection panel panel-custom" key={item.id}>
           <div className="panel-heading" >
             <h3 className="panel-title">{item.name}</h3>
+            <EventButt></EventButt>
           </div>
           <div className="panel-body">
             <ul>
-              <li>{item.date}</li>
-              <li>{item.type}</li>
-              <li>{item.organizer_id}</li>
+              <li>date: {item.date}</li>
+              <li>activity: {item.type}</li>
+              <li>Organizer: {item.organizer_id}</li>
+              <li>Public: {item.public+""}</li>
             </ul>
           </div>
         </div>
       );
       });
       return (
-      <div className="dashboard col-lg-10 col-md-10 col-xs-12">
-        {listItems}
-      </div>
+        <div>
+        <Input></Input>
+        <div className="dashboard col-lg-10 col-md-10 col-xs-12">
+          {listItems}
+        </div>
+        </div>
       )
     }
 });

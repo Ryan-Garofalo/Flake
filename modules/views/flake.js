@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
+import FR from '../../modules/components/flakerate'
 
 export default React.createClass({
   render() {
@@ -14,8 +15,8 @@ export default React.createClass({
           <div className="panel-body">
             <div className="showPageleft">
               <img className="showPageImage" src ="../../images/mom.jpg"/>
-              <h3>Overall Flake Rate: 0%</h3>
-              <h3>Personal Flake Rate: 0%</h3>
+              <h3>Overall Flake Rate: <FR></FR>%</h3>
+              <h3>Personal Flake Rate: <FR></FR>%</h3>
               <p>Flakes with Friends: 0%</p>
               <p>MTB Flakes: 0%</p>
               <p>Tennis Flakes: 0%</p>
