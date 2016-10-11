@@ -47,6 +47,7 @@ aside{
   border-top-style: inset;
   border-right-style: inset;
   border-bottom-style: inset;
+  height: 100vh;
 }
 footer{
   background-color: black;
@@ -237,11 +238,53 @@ tr{
   justify-content: center;
   align-items: center;
 }
-#newevent{
+#{
   margin-top: 10px;
 }
 .eventButt{
   margin-left: 10px;
   margin-top: -24px;
   float:right;
+}
+#newevent{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  /*background-color:#FFFFE9;*/
+  /*height: 100vh;
+  width: 100vw;*/
+}
+.eventStuff{
+margin-left: 40px;
+}
+.inputField{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#connectionName{
+  margin-top: 20px;
+  margin-left: 20px;
+}
+#joinButton{
+  display: inline-block;
+}
+.joinButt{
+  margin-top: -23px;
+  float:right;
+}
+.inline{
+  display: flex;
+  flex-wrap: nowrap;
+}
+.lilSpace{
+  margin-left: 20px;
+}
+.buttonCont{
+  float:right;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 110px;
+  justify-content: space-between;
+  margin-top: -27px;
 }

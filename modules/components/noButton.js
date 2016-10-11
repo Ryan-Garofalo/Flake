@@ -8,19 +8,20 @@ export default React.createClass({
   getInitialState: function(){
     return {fr:[]};
   },
-  componentWillMount: function(){
-    HTTP.get('/fr')
+  FireEvent: function(){
+    console.log("hi");
+    var eventId = this.props.id;
+    HTTP.get('/no/'+eventId)
     .then(function(data){
-      console.log(data);
-        this.setState({fr:data[0]});
+    this.setState({fr:data[0]});
+    window.location.reload()
     }.bind(this));
   },
   render: function(){
-    var events = this.state.fr.events;
     console.log(name);
       return (
       <div>
-        <h1>{events}</h1>
+        <button onClick={this.FireEvent}>no</button>
       </div>
       )
     }

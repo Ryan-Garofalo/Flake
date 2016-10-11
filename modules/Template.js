@@ -41,8 +41,7 @@ var Aside = React.createClass({
           <div className="profile_pic_container">
             <img className="profilePic" src="../images/ryan.jpg"/>
           </div>
-          <div id="flakeRate"><Link to="/100/flake">Flake Rate: <FR></FR>%</Link></div>
-
+          <div id="flakeRate" className="inline"><Link to="/100/flake">Flake Rate: <FR></FR>%</Link></div>
           <Search />
           <ConnectionTypes />
           <p><Link to="/100/dashboard">Dashboard</Link></p>

@@ -18,11 +18,12 @@ export default React.createClass({
   },
   render: function(){
     var listItems = this.state.ingredients.map(function(item, i){
-      console.log(item);
+      var url = '/connection/sched/'+item.friend2_id
+      console.log(url);
       return (
         <div className="connection panel panel-custom" key={item.id} >
           <div className="panel-heading" >
-            <h3 className="panel-title"><Link to='/100/connection/sched/'>{item.friend2_id}</Link></h3>
+            <h3 className="panel-title"><Link to={url}>{item.friend2_id}</Link></h3>
           </div>
           <h3><CFR id={item.friend2_id}></CFR></h3>
         </div>

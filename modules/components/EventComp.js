@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router'
 var HTTP = require('../services/httpservice');
-import Input from '../components/input'
+
 
 
 export default React.createClass({
@@ -9,9 +9,7 @@ export default React.createClass({
     return {fr:[]};
   },
   componentWillMount: function(){
-    var id = this.props.id;
-    console.log(id);
-    HTTP.get('/connectfr/'+id)
+    HTTP.get('/fr')
     .then(function(data){
       console.log(data);
         this.setState({fr:data[0]});
@@ -19,14 +17,10 @@ export default React.createClass({
   },
   render: function(){
     var events = this.state.fr.events;
-    var flakes = this.state.fr.fr;
-    var fr = Math.round(flakes/events * 100)
-
+    console.log(name);
       return (
-      <div className="eventStuff">
-        <h1>Flake Rate: {fr} %</h1>
-        <h2>Events: {events}</h2>
-        <h2>Flakes: {flakes}</h2>
+      <div>
+        <h1>{events}</h1>
       </div>
       )
     }

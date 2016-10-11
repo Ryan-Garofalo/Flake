@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router'
 import FR from '../../modules/components/flakerate'
+import Events from '../../modules/components/EventComp.js'
+import Flakes from '../../modules/components/FlakeComp.js'
 
 export default React.createClass({
   render() {
@@ -15,13 +17,17 @@ export default React.createClass({
           <div className="panel-body">
             <div className="showPageleft">
               <img className="showPageImage" src ="../../images/mom.jpg"/>
-              <h3>Overall Flake Rate: <FR></FR>%</h3>
-              <p>Personal Flake Rate: 0%</p>
-              <p>Flakes with Friends: 0%</p>
-              <p>MTB Flakes: 0%</p>
-              <p>Tennis Flakes: 0%</p>
-              <p>Ski Flakes: 0%</p>
-              <p>HW Flakes: 0%</p>
+              <h2 className="inline">Overall Flake Rate: <FR className="lilSpace"></FR>%</h2>
+              <h2 className="inline">Events: <Events className="lilSpace"></Events> </h2>
+              <h2 className="inline">Flakes: <Flakes className="lilSpace"></Flakes></h2>
+              <ul>
+              <li>Personal Flake Rate: 0%</li>
+              <li>Flakes with Friends: 0%</li>
+              <li>MTB Flakes: 0%</li>
+              <li>Tennis Flakes: 0%</li>
+              <li>Ski Flakes: 0%</li>
+              <li>HW Flakes: 0%</li>
+              </ul>
             </div>
             <div className="connectionHistory">
               <div className="innerHistory">
