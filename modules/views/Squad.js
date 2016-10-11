@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router'
 var HTTP = require('../services/httpservice');
-// var ListItem = require('../../components/ListItem.jsx');
+import CFR from '../../modules/components/connectionFlakerate'
 
 
 
@@ -22,16 +22,9 @@ export default React.createClass({
       return (
         <div className="connection panel panel-custom" key={item.id} >
           <div className="panel-heading" >
-            <h3 className="panel-title"><Link to='/100/connection/501'>{item.friend2_id}</Link></h3>
-            {/* <button id="eventButton">Add Event</button> */}
+            <h3 className="panel-title"><Link to='/100/connection/sched/'>{item.friend2_id}</Link></h3>
           </div>
-          {/* <div className="panel-body">
-            <ul>
-              <li>{item.date}</li>
-              <li>{item.type}</li>
-              <li>{item.organizer_id}</li>
-            </ul>
-          </div> */}
+          <h3><CFR id={item.friend2_id}></CFR></h3>
         </div>
       );
       });

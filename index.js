@@ -1,10 +1,11 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { Router, Route, browserHistory} from 'react-router'
-import Login from './modules/Login.js'
-import SignUp from './modules/SignUp.js'
-import Template from './modules/Template.js'
-import Dashboard from './modules/views/dashboard.js'
+import Login from './modules/Login'
+import SignUp from './modules/SignUp'
+import Template from './modules/Template'
+import Dashboard from './modules/views/dashboard'
+import ConnectionDashboard from './modules/views/connectionDashboard'
 import Activities from './modules/views/activities'
 import Flake from './modules/views/flake'
 import Squad from './modules/views/Squad'
@@ -25,6 +26,7 @@ render((
       <Route path="/:userName/calender" component={Calender}/>
       <Route path="/:userName/practice" component={Practice}/>
       <Route path="/:userName/profile" component={Profile} />
-    </Route>
+      <Route path="/:userName/connection/sched" component={ConnectionDashboard} />
+    </Route> 
   </Router>
 ), document.getElementById('app'))
