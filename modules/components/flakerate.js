@@ -18,7 +18,7 @@ export default React.createClass({
   render: function(){
     var name = this.state.fr.fr
       return (
-      <div className="dashboard col-lg-10 col-md-10 col-xs-12">
+      <div>
         <h1>{name}</h1>
       </div>
       )

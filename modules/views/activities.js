@@ -2,27 +2,29 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router';
 
+
+
 var data = [
   {
-    day:"Monday"
+    name:"Biking"
   },
   {
-    day:"Tuesday"
+    name:"Tennis"
   },
   {
-    day:"Wednesday"
+    name:"Skiing"
   },
   {
-    day:"Thursday"
+    name:"Gym"
   },
   {
-    day:"Friday"
+    name:"HW"
   },
   {
-    day:"Saturday"
+    name:"Dog Park"
   },
   {
-    day:"Sunday"
+    name:"Hiking"
   },
 ]
 
@@ -48,14 +50,14 @@ var Dashboard = React.createClass({
 
 var Connections = React.createClass({
   render(){
-    var arr = this.props.data.map(function(connection, i){
+    var arr = this.props.data.map(function(Activities, i){
       return (
         <div className="connection panel panel-custom" key={i}>
           <div className="panel-heading">
-            <h3 className="panel-title"><Link to='/100/connection/501'>{connection.day}</Link></h3>
-            <button id="eventButton">Add Event</button>
+            <h3 className="panel-title">{Activities.name}</h3>
           </div>
           <div className="panel-body">
+
 
           </div>
         </div>

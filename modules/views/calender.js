@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router'
+import Calender from '../components/October.js'
 
 export default React.createClass({
   render() {
     return (
-      <div className='EditConnection'>
-        <h1>Calender</h1>
+      <div>
+        <Calender></Calender>
       </div>
     )
   }
