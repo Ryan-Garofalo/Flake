@@ -16,7 +16,7 @@ export default React.createClass({
             <div className="showPageleft">
               <img className="showPageImage" src ="../../images/mom.jpg"/>
               <h3>Overall Flake Rate: <FR></FR>%</h3>
-              <h3>Personal Flake Rate: <FR></FR>%</h3>
+              <p>Personal Flake Rate: 0%</p>
               <p>Flakes with Friends: 0%</p>
               <p>MTB Flakes: 0%</p>
               <p>Tennis Flakes: 0%</p>

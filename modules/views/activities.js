@@ -6,25 +6,40 @@ import { Link } from 'react-router';
 
 var data = [
   {
-    name:"Biking"
+    name:"Biking",
+    amount:22,
+    flakes:0,
   },
   {
-    name:"Tennis"
+    name:"Tennis",
+    amount:22,
+    flakes:0,
   },
   {
-    name:"Skiing"
+    name:"Skiing",
+    amount:22,
+    flakes:0,
+
   },
   {
-    name:"Gym"
+    name:"Gym",
+    amount:22,
+    flakes:0,
   },
   {
-    name:"HW"
+    name:"HW",
+    amount:22,
+    flakes:0,
   },
   {
-    name:"Dog Park"
+    name:"Dog Park",
+    amount:22,
+    flakes:0,
   },
   {
-    name:"Hiking"
+    name:"Hiking",
+    amount:22,
+    flakes:0,
   },
 ]
 
@@ -57,8 +72,8 @@ var Connections = React.createClass({
             <h3 className="panel-title">{Activities.name}</h3>
           </div>
           <div className="panel-body">
-
-
+            <h4>Amount: {Activities.amount}</h4>
+            <h4>Flakes: {Activities.flakes}</h4>
           </div>
         </div>
       );
