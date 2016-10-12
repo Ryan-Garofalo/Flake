@@ -156,8 +156,8 @@ a{
   width: auto;
 }
 .showPageImage{
-  height:20vh;
-  width:15vw;
+  height:150px;
+  width:auto;
 }
 .showConnection{
   height: 85vh;
@@ -276,6 +276,7 @@ margin-left: 40px;
 .inline{
   display: flex;
   flex-wrap: nowrap;
+  margin-right:
 }
 .lilSpace{
   margin-left: 20px;
@@ -287,4 +288,7 @@ margin-left: 40px;
   width: 110px;
   justify-content: space-between;
   margin-top: -27px;
+}
+.mainFlakeRate{
+  font-size:10px;
 }

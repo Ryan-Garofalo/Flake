@@ -20,9 +20,7 @@ export default React.createClass({
     var flakes = this.state.fr.fr;
     console.log(name);
       return (
-      <div>
-        <h1>{flakes}</h1>
-      </div>
+        <span>{flakes}</span>
       )
     }
 });

@@ -19,9 +19,7 @@ export default React.createClass({
     var events = this.state.fr.events;
     console.log(name);
       return (
-      <div>
-        <h1>{events}</h1>
-      </div>
+        <span>{events}</span>
       )
     }
 });

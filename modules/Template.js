@@ -23,7 +23,6 @@ var Header = React.createClass({
         <header>
           <h1 className="title">Flake</h1>
           <ul className="nav">
-            {/* <li className="navlink"><Link to="/100/dashboard">Dashboard</Link></li> */}
             <li className="navlink"><Link to="/">Edit Profile</Link></li>
             <li className="navlink"><Link to="/">Log Out</Link></li>
           </ul>
@@ -48,7 +47,7 @@ var Aside = React.createClass({
           <p><Link to="/100/mySquad">Squad</Link></p>
           <p><Link to="/100/calender">Calender</Link></p>
           <p><Link to="/100/Activities">Activities</Link></p>
-          <p><Link to="/100/practice">Practice</Link></p>
+          {/* <p><Link to="/100/practice">Practice</Link></p> */}
         </aside>
       </div>
     )

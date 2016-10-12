@@ -21,9 +21,9 @@ export default React.createClass({
     var fr = Math.round(flakes/events * 100);
     console.log(name);
       return (
-      <div>
-        <h1>{fr}</h1>
-      </div>
+
+        <span>{fr}</span>
+      
       )
     }
 });

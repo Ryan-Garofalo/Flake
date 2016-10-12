@@ -24,9 +24,11 @@ export default React.createClass({
 
       return (
       <div className="eventStuff">
-        <h1>Flake Rate: {fr} %</h1>
-        <h2>Events: {events}</h2>
-        <h2>Flakes: {flakes}</h2>
+        <ul>
+          <li><h2>Flake Rate: {fr} %</h2></li>
+          <li><h3>Events: {events}</h3></li>
+          <li><h3>Flakes: {flakes}</h3></li>
+        </ul>
       </div>
       )
     }
