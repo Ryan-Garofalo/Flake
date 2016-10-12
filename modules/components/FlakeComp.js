@@ -18,12 +18,9 @@ export default React.createClass({
   render: function(){
     var events = this.state.fr.events;
     var flakes = this.state.fr.fr;
-    var fr = Math.round(flakes/events * 100);
     console.log(name);
       return (
-
-        <span>{fr}</span>
-      
+        <span>{flakes}</span>
       )
     }
 });

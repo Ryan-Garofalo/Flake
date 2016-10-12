@@ -8,22 +8,21 @@ export default React.createClass({
   getInitialState: function(){
     return {fr:[]};
   },
-  componentWillMount: function(){
-    HTTP.get('/fr')
+  FireEvent: function(){
+    console.log("hi");
+    var eventId = this.props.id;
+    HTTP.get('/no/'+eventId)
     .then(function(data){
-      console.log(data);
-        this.setState({fr:data[0]});
+    this.setState({fr:data[0]});
+    window.location.reload()
     }.bind(this));
   },
   render: function(){
-    var events = this.state.fr.events;
-    var flakes = this.state.fr.fr;
-    var fr = Math.round(flakes/events * 100);
     console.log(name);
       return (
-
-        <span>{fr}</span>
-      
+      <div>
+        <button onClick={this.FireEvent}>no</button>
+      </div>
       )
     }
 });

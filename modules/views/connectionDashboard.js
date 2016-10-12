@@ -11,10 +11,10 @@ export default React.createClass({
     return {ingredients:[]};
   },
   componentWillMount: function(){
-    console.log(this.props.id);
-    HTTP.get('/connection/sched')
+    var id = this.props.params.id;
+    HTTP.get('/connection/sched/'+id)
     .then(function(data){
-      // console.log(data);
+      console.log(data);
         this.setState({ingredients:data});
     }.bind(this));
   },
@@ -25,11 +25,11 @@ export default React.createClass({
         <div className="connection panel panel-custom" key={item.id}>
           <div className="panel-heading" >
             <h3 className="panel-title">{item.name}</h3>
-            <EventButt></EventButt>
+            <button className="joinButt">Join</button>
           </div>
-          <div className="panel-body">
+          <div className="panel-body eventStuff">
             <ul>
-              <li>Butts: {item.date}</li>
+              <li>Date: {item.date}</li>
               <li>activity: {item.type}</li>
               <li>Organizer: {item.organizer_id}</li>
               <li>Public: {item.public+""}</li>
@@ -41,6 +41,7 @@ export default React.createClass({
       return (
         <div>
         <div className="dashboard col-lg-10 col-md-10 col-xs-12">
+        <h1 id="connectionName">Viewing: {this.props.params.id}'s Schedule</h1>
           {listItems}
         </div>
         </div>

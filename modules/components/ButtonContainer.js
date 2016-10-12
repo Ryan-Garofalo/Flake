@@ -6,7 +6,7 @@ export default React.createClass({
       <div>
           <button className="eventButt">Flake</button>
           <button className="eventButt">No</button>
-          <button className="eventButt">Yesssss</button>
+          <button className="eventButt">Yes</button>
       </div>
     )
   }

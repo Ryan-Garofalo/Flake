@@ -1,13 +1,27 @@
 import React from 'react'
+import { Link } from 'react-router'
+var HTTP = require('../services/httpservice');
+import Input from '../components/input'
+
 
 export default React.createClass({
-  render() {
-    return (
+  getInitialState: function(){
+    return {fr:[]};
+  },
+  componentWillMount: function(){
+    HTTP.get('/fr')
+    .then(function(data){
+      console.log(data);
+        this.setState({fr:data[0]});
+    }.bind(this));
+  },
+  render: function(){
+    var events = this.state.fr.events;
+    console.log(name);
+      return (
       <div>
-          <button className="eventButt">Yes</button>
-          <button className="eventButt">No</button>
-          <button className="eventButt">Flake</button>
+        <h1>{events}</h1>
       </div>
-    )
-  }
-})
+      )
+    }
+});

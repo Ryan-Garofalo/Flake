@@ -23,6 +23,7 @@ export default React.createClass({
     HTTP.post('/form',arr)
     .then(function(response){
       console.log(response);
+      window.location.reload()
     }.bind(this));
   },
 
@@ -30,10 +31,10 @@ export default React.createClass({
   render: function() {
     return (
       <div id="newevent">
-      <input placeholder="Name" id="inputName"/>
-      <input placeholder="Date" id="inputDate"/>
-      <input placeholder="Activity" id="inputActivity"/>
-      <input placeholder="Public" id="inputPublic"/>
+      <input placeholder="Name" id="inputName" className="inputField"/>
+      <input placeholder="Date" id="inputDate" className="inputField"/>
+      <input placeholder="Activity" id="inputActivity" className="inputField"/>
+      <input placeholder="Public" id="inputPublic" className="inputField"/>
 
 
       <button onClick={this.onClick}>Add Event</button>

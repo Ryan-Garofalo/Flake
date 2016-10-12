@@ -10,6 +10,7 @@ export default React.createClass({
   },
   componentWillMount: function(){
     var id = this.props.id;
+    console.log(id);
     HTTP.get('/connectfr/'+id)
     .then(function(data){
       console.log(data);
@@ -19,13 +20,15 @@ export default React.createClass({
   render: function(){
     var events = this.state.fr.events;
     var flakes = this.state.fr.fr;
-    var fr = Math.round(flakes/events * 100) 
+    var fr = Math.round(flakes/events * 100)
 
       return (
-      <div>
-        <h1>Flake Rate: {fr} %</h1>
-        <h2>Events: {events}</h2>
-        <h2>Flakes: {flakes}</h2>
+      <div className="eventStuff">
+        <ul>
+          <li><h2>Flake Rate: {fr} %</h2></li>
+          <li><h3>Events: {events}</h3></li>
+          <li><h3>Flakes: {flakes}</h3></li>
+        </ul>
       </div>
       )
     }

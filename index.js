@@ -26,7 +26,7 @@ render((
       <Route path="/:userName/calender" component={Calender}/>
       <Route path="/:userName/practice" component={Practice}/>
       <Route path="/:userName/profile" component={Profile} />
-      <Route path="/:userName/connection/sched" component={ConnectionDashboard} />
-    </Route> 
+      <Route path="/connection/sched/:id" component={ConnectionDashboard} />
+    </Route>
   </Router>
 ), document.getElementById('app'))
