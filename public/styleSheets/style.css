@@ -149,6 +149,7 @@ a{
 }
 .ryanSignupButton{
   margin-right: 20px;
+  margin-left: 60px;
 }
 .stickFam{
   margin-top: 25px;
@@ -300,4 +301,9 @@ margin-left: 40px;
 }
 .spaceRight{
     margin-right: 10px;
+}
+.showPageRight{
+  margin-top: 50px;
+  margin-right: 50px;
+  float:right;
 }

@@ -31,8 +31,8 @@ export default React.createClass({
   render: function() {
     return (
       <div id="newevent">
-      <input placeholder="Activity" id="inputActivity" className="inputField"/>
       <input placeholder="Name" id="inputName" className="inputField"/>
+      <input placeholder="Activity" id="inputActivity" className="inputField"/>
       <input placeholder="Date" id="inputDate" className="inputField"/>
       <label className="spaceRight">Public</label>
       <input type="checkbox" id="inputPublic" className="inputField spaceLeft" checked/>

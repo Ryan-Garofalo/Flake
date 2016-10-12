@@ -20,13 +20,16 @@ export default React.createClass({
   },
   render: function(){
     var listItems = this.state.ingredients.map(function(item, i){
+      console.log("this is the item");
       console.log(item);
+      console.log(item.organizer_id);
+
       return (
         <div className="connection panel panel-custom" key={item.id}>
           <div className="panel-heading" >
             <h3 className="panel-title">{item.name}</h3>
             <div className="buttonCont">
-              <Yes id={item.id}></Yes>
+              <Yes id={item.id} organizer={item.organizer_id}></Yes>
               <No id={item.id}></No>
               <Flake id={item.id}></Flake>
             </div>

@@ -12,33 +12,33 @@ var data = [
   },
   {
     name:"Tennis",
-    amount:22,
+    amount:3,
     flakes:0,
   },
   {
     name:"Skiing",
-    amount:22,
+    amount:55,
     flakes:0,
 
   },
   {
     name:"Gym",
-    amount:22,
+    amount:120,
     flakes:0,
   },
   {
     name:"HW",
-    amount:22,
+    amount:10000000,
     flakes:0,
   },
   {
     name:"Dog Park",
-    amount:22,
+    amount:35,
     flakes:0,
   },
   {
     name:"Hiking",
-    amount:22,
+    amount:7,
     flakes:0,
   },
 ]

@@ -52,6 +52,7 @@ export default React.createClass({
                     </tr> */}
                   </tbody>
                 </table>
+                
               </div>
             </div>
           </div>
