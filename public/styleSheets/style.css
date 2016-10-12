@@ -292,3 +292,12 @@ margin-left: 40px;
 .mainFlakeRate{
   font-size:10px;
 }
+.block{
+  display: block;
+}
+.spaceLeft{
+  margin-left: 15px;
+}
+.spaceRight{
+    margin-right: 10px;
+}

@@ -47,6 +47,7 @@ var Aside = React.createClass({
           <p><Link to="/100/mySquad">Squad</Link></p>
           <p><Link to="/100/calender">Calender</Link></p>
           <p><Link to="/100/Activities">Activities</Link></p>
+          <p><Link to="#">Messages</Link></p>
           {/* <p><Link to="/100/practice">Practice</Link></p> */}
         </aside>
       </div>
@@ -86,7 +87,8 @@ var Footer = React.createClass({
     return (
       <div className="footer">
         <footer>
-          <small dangerouslySetInnerHTML={{__html: '&copy Garf corp'}}></small>
+        <small className="block">Making The World a Better Place One Less Flake at a Time</small>
+          <small className="block" dangerouslySetInnerHTML={{__html: '&copy Garf corp'}}></small>
         </footer>
       </div>
     )

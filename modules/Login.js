@@ -56,7 +56,7 @@ var UserForm = React.createClass({
           <Link to="/signup">Sign Up</Link>
         </button>
         <button className="ryanButton" type="submit">
-          <Link to="/1/dashboard">Log In</Link>
+          <Link to="/100/dashboard">Log In</Link>
         </button>
       </form>
     )

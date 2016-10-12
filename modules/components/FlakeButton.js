@@ -14,6 +14,7 @@ export default React.createClass({
     .then(function(data){
     this.setState({fr:data[0]});
     window.location.reload()
+    alert("You're a Super Flake,Super Flake, You Super Flaky, Yeah");
     }.bind(this));
   },
   render: function(){

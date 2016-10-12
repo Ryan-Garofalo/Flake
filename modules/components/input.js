@@ -31,13 +31,14 @@ export default React.createClass({
   render: function() {
     return (
       <div id="newevent">
+      <input placeholder="Activity" id="inputActivity" className="inputField"/>
       <input placeholder="Name" id="inputName" className="inputField"/>
       <input placeholder="Date" id="inputDate" className="inputField"/>
-      <input placeholder="Activity" id="inputActivity" className="inputField"/>
-      <input placeholder="Public" id="inputPublic" className="inputField"/>
+      <label className="spaceRight">Public</label>
+      <input type="checkbox" id="inputPublic" className="inputField spaceLeft" checked/>
 
 
-      <button onClick={this.onClick}>Add Event</button>
+      <button className="spaceLeft" onClick={this.onClick}>Add Event</button>
       </div>
     )
   }

@@ -35,7 +35,7 @@ export default React.createClass({
             <ul>
               <li>date: {item.date}</li>
               <li>activity: {item.type}</li>
-              <li>Organizer: {item.organizer_id}</li>
+              {/* <li>Organizer: {item.organizer_id}</li> */}
               <li>Public: {item.public+""}</li>
             </ul>
           </div>
