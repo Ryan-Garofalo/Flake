@@ -25964,7 +25964,6 @@
 	  },
 	  componentWillMount: function componentWillMount() {
 	    HTTP.get('/fr').then(function (data) {
-	      console.log(data);
 	      this.setState({ fr: data[0] });
 	    }.bind(this));
 	  },
@@ -25972,7 +25971,6 @@
 	    var events = this.state.fr.events;
 	    var flakes = this.state.fr.fr;
 	    var fr = Math.round(flakes / events * 100);
-	    console.log(name);
 	    return _react2.default.createElement(
 	      'span',
 	      null,
@@ -26018,11 +26016,8 @@
 	    var ya = document.querySelector("#inputPublic").value;
 	    arr.push(name, date, activity, ya);
 
-	    console.log(arr);
-
 	    HTTP.post('/form', arr).then(function (response) {
-	      console.log(response);
-	      // window.location.reload()
+	      this.props.reRender();
 	    }.bind(this));
 	  },
 
@@ -26038,7 +26033,7 @@
 	        { className: 'spaceRight' },
 	        'Public'
 	      ),
-	      _react2.default.createElement('input', { type: 'checkbox', id: 'inputPublic', className: 'inputField spaceLeft', checked: true }),
+	      _react2.default.createElement('input', { type: 'checkbox', id: 'inputPublic', className: 'inputField spaceLeft', defaultChecked: true }),
 	      _react2.default.createElement(
 	        'button',
 	        { className: 'spaceLeft', onClick: this.onClick },
@@ -26570,11 +26565,14 @@
 	      this.setState({ ingredients: data });
 	    }.bind(this));
 	  },
+	  reRender: function reRender() {
+	    HTTP.get('/events').then(function (data) {
+	      this.setState({ ingredients: data });
+	    }.bind(this));
+	  },
 	  render: function render() {
+	    var that = this;
 	    var listItems = this.state.ingredients.map(function (item, i) {
-	      console.log("this is the item");
-	      console.log(item);
-	      console.log(item.organizer_id);
 
 	      return _react2.default.createElement(
 	        'div',
@@ -26590,9 +26588,9 @@
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'buttonCont' },
-	            _react2.default.createElement(_YesButton2.default, { id: item.id, organizer: item.organizer_id }),
-	            _react2.default.createElement(_NoButton2.default, { id: item.id }),
-	            _react2.default.createElement(_FlakeButton2.default, { id: item.id })
+	            _react2.default.createElement(_YesButton2.default, { reRender: that.reRender, id: item.id, organizer: item.organizer_id }),
+	            _react2.default.createElement(_NoButton2.default, { reRender: that.reRender, id: item.id }),
+	            _react2.default.createElement(_FlakeButton2.default, { reRender: that.reRender, id: item.id })
 	          )
 	        ),
 	        _react2.default.createElement(
@@ -26626,7 +26624,7 @@
 	    return _react2.default.createElement(
 	      'div',
 	      null,
-	      _react2.default.createElement(_input2.default, null),
+	      _react2.default.createElement(_input2.default, { reRender: this.reRender }),
 	      _react2.default.createElement(
 	        'div',
 	        { className: 'dashboard col-lg-10 col-md-10 col-xs-12' },
@@ -26710,11 +26708,10 @@
 	    var eventId = this.props.id;
 	    HTTP.get('/yes/' + eventId).then(function (data) {
 	      this.setState({ fr: data[0] });
-	      window.location.reload();
+	      this.props.reRender();
 	    }.bind(this));
 	  },
 	  render: function render() {
-	    console.log(name);
 	    return _react2.default.createElement(
 	      'div',
 	      null,
@@ -26761,11 +26758,10 @@
 	    var eventId = this.props.id;
 	    HTTP.get('/no/' + eventId).then(function (data) {
 	      this.setState({ fr: data[0] });
-	      window.location.reload();
+	      this.props.reRender();
 	    }.bind(this));
 	  },
 	  render: function render() {
-	    console.log(name);
 	    return _react2.default.createElement(
 	      'div',
 	      null,
@@ -26811,12 +26807,10 @@
 	    var eventId = this.props.id;
 	    HTTP.get('/flake/' + eventId).then(function (data) {
 	      this.setState({ fr: data[0] });
-	      window.location.reload();
-	      alert("You're a Super Flake,Super Flake, You Super Flaky, Yeah");
+	      this.props.reRender();
 	    }.bind(this));
 	  },
 	  render: function render() {
-	    console.log(name);
 	    return _react2.default.createElement(
 	      'div',
 	      null,
@@ -26865,13 +26859,11 @@
 	  componentWillMount: function componentWillMount() {
 	    var id = this.props.params.id;
 	    HTTP.get('/connection/sched/' + id).then(function (data) {
-	      console.log(data);
 	      this.setState({ ingredients: data });
 	    }.bind(this));
 	  },
 	  render: function render() {
 	    var listItems = this.state.ingredients.map(function (item, i) {
-	      console.log(item);
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'connection panel panel-custom', key: item.id },
@@ -45959,13 +45951,11 @@
 	  },
 	  componentWillMount: function componentWillMount() {
 	    HTTP.get('/fr').then(function (data) {
-	      console.log(data);
 	      this.setState({ fr: data[0] });
 	    }.bind(this));
 	  },
 	  render: function render() {
 	    var events = this.state.fr.events;
-	    console.log(name);
 	    return _react2.default.createElement(
 	      'span',
 	      null,
@@ -46005,14 +45995,12 @@
 	  },
 	  componentWillMount: function componentWillMount() {
 	    HTTP.get('/fr').then(function (data) {
-	      console.log(data);
 	      this.setState({ fr: data[0] });
 	    }.bind(this));
 	  },
 	  render: function render() {
 	    var events = this.state.fr.events;
 	    var flakes = this.state.fr.fr;
-	    console.log(name);
 	    return _react2.default.createElement(
 	      'span',
 	      null,
@@ -46052,14 +46040,12 @@
 	  },
 	  componentWillMount: function componentWillMount() {
 	    HTTP.get('/squad').then(function (data) {
-	      // console.log(data);
 	      this.setState({ ingredients: data });
 	    }.bind(this));
 	  },
 	  render: function render() {
 	    var listItems = this.state.ingredients.map(function (item, i) {
 	      var url = '/connection/sched/' + item.friend2_id;
-	      console.log(url);
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'connection panel panel-custom', key: item.id },
@@ -46122,9 +46108,7 @@
 	  },
 	  componentWillMount: function componentWillMount() {
 	    var id = this.props.id;
-	    console.log(id);
 	    HTTP.get('/connectfr/' + id).then(function (data) {
-	      console.log(data);
 	      this.setState({ fr: data[0] });
 	    }.bind(this));
 	  },
@@ -46206,13 +46190,11 @@
 	  },
 	  componentWillMount: function componentWillMount() {
 	    HTTP.get('/fr').then(function (data) {
-	      console.log(data);
 	      this.setState({ fr: data[0] });
 	    }.bind(this));
 	  },
 	  render: function render() {
 	    var events = this.state.fr.events;
-	    console.log(name);
 	    return _react2.default.createElement(
 	      'div',
 	      null,

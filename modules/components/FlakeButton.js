@@ -13,12 +13,10 @@ export default React.createClass({
     HTTP.get('/flake/'+eventId)
     .then(function(data){
     this.setState({fr:data[0]});
-    window.location.reload()
-    alert("You're a Super Flake,Super Flake, You Super Flaky, Yeah");
+    this.props.reRender();
     }.bind(this));
   },
   render: function(){
-    console.log(name);
       return (
       <div>
         <button onClick={this.FireEvent}>Flake</button>

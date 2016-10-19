@@ -10,10 +10,8 @@ export default React.createClass({
   },
   componentWillMount: function(){
     var id = this.props.id;
-    console.log(id);
     HTTP.get('/connectfr/'+id)
     .then(function(data){
-      console.log(data);
         this.setState({fr:data[0]});
     }.bind(this));
   },

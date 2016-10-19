@@ -11,14 +11,12 @@ export default React.createClass({
   componentWillMount: function(){
     HTTP.get('/fr')
     .then(function(data){
-      console.log(data);
         this.setState({fr:data[0]});
     }.bind(this));
   },
   render: function(){
     var events = this.state.fr.events;
     var flakes = this.state.fr.fr;
-    console.log(name);
       return (
         <span>{flakes}</span>
       )

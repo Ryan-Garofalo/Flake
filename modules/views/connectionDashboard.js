@@ -14,13 +14,11 @@ export default React.createClass({
     var id = this.props.params.id;
     HTTP.get('/connection/sched/'+id)
     .then(function(data){
-      console.log(data);
         this.setState({ingredients:data});
     }.bind(this));
   },
   render: function(){
     var listItems = this.state.ingredients.map(function(item, i){
-      console.log(item);
       return (
         <div className="connection panel panel-custom" key={item.id}>
           <div className="panel-heading" >

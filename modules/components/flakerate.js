@@ -11,7 +11,6 @@ export default React.createClass({
   componentWillMount: function(){
     HTTP.get('/fr')
     .then(function(data){
-      console.log(data);
         this.setState({fr:data[0]});
     }.bind(this));
   },
@@ -19,11 +18,8 @@ export default React.createClass({
     var events = this.state.fr.events;
     var flakes = this.state.fr.fr;
     var fr = Math.round(flakes/events * 100);
-    console.log(name);
       return (
-
         <span>{fr}</span>
-      
       )
     }
 });

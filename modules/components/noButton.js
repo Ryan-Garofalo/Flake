@@ -14,11 +14,10 @@ export default React.createClass({
     HTTP.get('/no/'+eventId)
     .then(function(data){
     this.setState({fr:data[0]});
-    window.location.reload()
+    this.props.reRender();
     }.bind(this));
   },
   render: function(){
-    console.log(name);
       return (
       <div>
         <button onClick={this.FireEvent}>no</button>

@@ -12,14 +12,12 @@ export default React.createClass({
   componentWillMount: function(){
     HTTP.get('/squad')
     .then(function(data){
-      // console.log(data);
         this.setState({ingredients:data});
     }.bind(this));
   },
   render: function(){
     var listItems = this.state.ingredients.map(function(item, i){
       var url = '/connection/sched/'+item.friend2_id
-      console.log(url);
       return (
         <div className="connection panel panel-custom" key={item.id} >
           <div className="panel-heading" >

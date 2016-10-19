@@ -18,12 +18,10 @@ export default React.createClass({
     var ya = document.querySelector("#inputPublic").value;
     arr.push(name,date,activity,ya)
 
-    console.log(arr);
 
     HTTP.post('/form',arr)
     .then(function(response){
-      console.log(response);
-      window.location.reload()
+      this.props.reRender();
     }.bind(this));
   },
 
@@ -35,9 +33,7 @@ export default React.createClass({
       <input placeholder="Activity" id="inputActivity" className="inputField"/>
       <input placeholder="Date" id="inputDate" className="inputField"/>
       <label className="spaceRight">Public</label>
-      <input type="checkbox" id="inputPublic" className="inputField spaceLeft" checked/>
-
-
+      <input type="checkbox" id="inputPublic" className="inputField spaceLeft" defaultChecked/>
       <button className="spaceLeft" onClick={this.onClick}>Add Event</button>
       </div>
     )
