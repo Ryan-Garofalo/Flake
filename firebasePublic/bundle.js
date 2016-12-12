@@ -25506,7 +25506,7 @@
 	      _react2.default.createElement(
 	        'h1',
 	        { className: 'ryanSplashLogo' },
-	        'Flake'
+	        'FlakeBBBB'
 	      ),
 	      _react2.default.createElement(
 	        'h4',
@@ -25646,7 +25646,7 @@
 	      _react2.default.createElement(
 	        'h1',
 	        { className: 'ryanSplashLogo' },
-	        'FRM'
+	        'Flake'
 	      ),
 	      _react2.default.createElement(
 	        'h2',
