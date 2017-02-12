@@ -1,13 +1,5 @@
-Flake
+#Flake
 
-## To run on your local machine, without visiting deployed URL, you must run:  
-`npm install`
-
-### Notes for the people working on this thing
-
-#### hexcodes  
-green #BAD80A
-blue #003D6B
-black #000000
-white-ish #FFFFE9
-purple-ish #4F42C1
+Flake is a social networking application designed to increase productivity and reducing flaking.  
+It is a decoupled app the utilizes React, Node.js, Express, PostgreSQL, Bootstrap and custom
+CSS.
